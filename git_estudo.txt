@@ -44,4 +44,7 @@
 #para ver o log resumido
     git log --oneline
 
+#Comando para atualizar o GitHub
+#    git push -u origin master
+
 #It's OK!
