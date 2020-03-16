@@ -27,4 +27,21 @@
 
 # projeto --> container --> .git
 #	     git add 		git commit
-#teste#teste#teste
+
+
+# copiar o projeto para o container
+    git add nomedoArquivo
+
+# copiar o arquivo no repositorio .git
+    git commit -m "mensagem descritiva da alteracao"
+
+#para ver o status
+    git status
+
+#para ver os logs
+    git log
+
+#para ver o log resumido
+    git log --oneline
+
+    
