@@ -1,0 +1,23 @@
+## Instalando o Git
+# Linux
+#	Ubuntu
+#		sudo apt-get install git-all
+#	RH
+#		sudo yum install git-all
+
+# http://git-scm.com/download/linux
+
+## Definindo a identidade de usuario
+#	git config --global user.name "NomeDoUsuario"
+#	git config --global user.email "nome@mail"
+
+##Definindo o editor de texto
+#	git config --global core.editor NomedoEditor
+#OBS: para editores padrao linux e Mac, basta colocar o nome do editor, por exemplo, emacs.
+
+##Testando as configuracoes
+#	git config --list
+
+#	git config user.name
+
+
