@@ -20,4 +20,10 @@
 
 #	git config user.name
 
+##Para criar um repositorio local
+# git init
+#OBS: cria um pasta .git (diretorio oculto)
+#onde o git cria o grafo de commits
 
+# projeto --> container --> .git
+#	     git add 		git commit
