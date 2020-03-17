@@ -1,0 +1,27 @@
+Principais comandos do no4j
+
+#MATCH  --> equivalente ao SELECT no SQL
+padrao principal: (um no)-[relacionado]-(com outro no)
+
+#CREATE -->Criar nos e relacionamento entre eles
+
+#MERGE --> Criar nos e relacoes apenas quando elas nao existem previamente na base
+
+#SET --> muda as propriedades de um no ou relacao 
+
+#RETURN --> Responsavel por trazer as consultas em algum formato especifico, retorna linhas ou grafo completo, sendo possivel fazer somas, contagens, medias e etc
+
+#DELETE --> Apagar no ou relacao inteira
+* DETACH DELETE --> apaga nos e relacoes inteiras
+
+#REMOVE  -->Remove propriedades, labels de nos ou relacoes
+
+#WITH  --> Como o Cypher suporta fazer consultas previas, o WITH serve para expor o resultado de um MATCH anterior para outro MATCH ou RETURN
+*Eh a chave para quebrar patterns complexos em queries menores
+
+--> ref-card
+http://neo4j.com/docs/2.1/cypher-refcard/
+
+OBS: Nomes e variaveis sao case-sensitive
+
+
