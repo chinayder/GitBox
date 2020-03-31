@@ -1,0 +1,106 @@
+Linux+
+Cap01 - Preparing your Environment - 31mar-31mar
+
+Verificar este endereco
+www.chriswatterston.com/blog/my-there-is-no-cloud-sticker
+
++ Updating software on CentOS
+# sudo yum update
+
++Updating software on Ubuntu
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
++Updating software on openSuse
+$ sudo zypper patch
+
++Updating software on Fedora
+$ sudo su -c 'dnf upgrade'
+$ sudo su -c 'dnf upgrade -refresh'
+
+Cap02 - Sifiting Through Services - 31mar-xxxx
+
+Launching Services on Linux
+
+1. Background process, running at all times listening for requests --> Daemon
+2. Process spawned by a parent program that listens for the requestes
+
+Linux daemon programs often end with the letter d to indicate they're daemon processes
+Super-servers are programs that listen for network connections for several different
+applications.
+The original super-server program created for Linux was the internet daemon ( inetd)
+application. The inetd program runs as a daemon, listening for specifi c requests from
+clients, and launches the appropriate service program when needed. The inetd program
+uses the /etc/inetd.conf confi guration fi le to allow you to defi ne the services for which it
+handles requests.
+The extended internet daemon (xinetd) application is an advanced version of inetd . It
+too launches service programs as requested by clients, but it contains additional features
+
+Serving the Basics
+
+Web Services
+    The Apache Server 
+        The Apache web server has become popular due to its modularity. Each advanced feature
+of the Apache server is built as a plug-in module
+
+    The xginX Server (engine-X)
+        designed as an advanced replacement for the Apache web
+server, improving on performance and providing some additional features, such as working
+as a web proxy, mail proxy, web page cache, and even load-balancing server.
+        has a smaller memory footprint than the larger Apache program,
+making it ideal for high-volume environments. It’s capable of handling over 10,000
+simultaneous network client connections
+
+    The lighthttpd Package
+        low memory usage and low CPU usage, making it ideal for smaller server applications, such as in embedded systems.
+        it also incorporates a built-in database, allowing you to combine basic web and database services in a single package.
+
+Databese Services
+
+    The PostgreSQL Server
+        Standard ACID(Atomicity, consistency, isolation,durability)
+        Versatility and complexity
+
+    The MySQL Server
+        Utilizing the faster storage engine
+
+    The MongoDB Server
+        NoSQL database
+        Store data as individual documents, records jSON elements
+        Supports many relational database features, such as indexes, queries, replication, and even load balancing
+
+Email Services
+
+    the linux email server is normally divided into three separate functions
+
+    1. The mail transfer agent (MTA)
+        is responsible for handling both incoming and outgoing email messages on the server
+            1.1 Sendmail -- very complex to configure correctly
+            1.2 Postfix -- modular application, simplicity
+            1.3 Exim -- 
+    2. The mail delivery agent (MDA)
+        The MDA program receives messages destined for local users from the MTA program and then determines how those messages are to be delivered. Messages can be delivered directly to the
+local user account or to an alternate location defined by the user, often by incorporating filters.
+            2.1 Binmail -- most popular, simplicity
+            2.2 Procmail -- 
+    3. The mail user agent (MUA)
+        is the program that interacts with end users, usually run in the client side
+
+Serving Local Networks
+
+File servers
+The are two basics methods for sharing files in a local network environments
+    Peer-to-Peer -- one workstation enables another workstation to access files stored locally on its hard drive. Ideal for two people
+    Client/Server -- utilizes a centralized file server for sharing files that multiple clients can access and modify as needed
+
+In the Linux world, there are two common server software packages used for sharing files:
+
+    NFS ( Network File System) -- is a protocol used to share folders
+    SMB ( System Message Block) - windows protocol. the Samba software package was created to allow Linux systems to interact with Win Clients and servers
+
+Print servers
+The standard Linux print sharing is called CUPS (Common Unix Printing System)
+The Key to CUPS is the printer drivers
+For connecting to network printers, CUPS uses the Internet Printing Protocol (IPP)
+
+....86/926 -- 31mar
