@@ -1,0 +1,52 @@
+
+
+>>Imagens
+
+> Procurar/Listar no Docker Hub(default)
+
+docker search NOME_IMAGEM_DESEJ
+#docker search centos |head -n5
+
+> Baixar (download ou pull)
+
+docker pull NOME_IMAGEM_DESEJ
+#docker pull centos
+
+> Listar imagens baixadas em repositorio local
+ #docker image ls 
+
+
+> Iniciando imagem (ex-->centos)
+
+#docker run -ti centos /bin/bash
+
+--container esta funcional
+--se sair do terminal ou pressionar CRTL+C ou CRTL+D o container morre
+--para sair do container e ele continuar em execução, pressiona CRTL + p + q 
+
+>> Containers
+
+> Identificando containers em execução
+#docker container ls
+
+> Iteragindo com o container sem estar dentro dele (ex:centos)
+#docker container exec NUM_CONTAINER yum update -y
+#docker container exec NUM_CONTAINER df -h 
+
+
+>Parando o container
+#docker container stop NUM_CONTAINER
+
+>Apagando o container
+#docker container rm NUM_CONTAINER
+
+>Apagando a imagem (ex:centos)
+#docker image rm centos
+
+>Apagando um container de forma forçada (ex: nginx)
+#docker container rm -f NUM_CONTAINER
+
+>Apagando imagem
+#docker image rm nginx
+
+

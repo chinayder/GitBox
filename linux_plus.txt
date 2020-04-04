@@ -104,3 +104,59 @@ The Key to CUPS is the printer drivers
 For connecting to network printers, CUPS uses the Internet Printing Protocol (IPP)
 
 ....86/926 -- 31mar
+
+Cap03 - Managing Files, Directories, and Text
+
+Viewing and Creating Files
+
+List command
+$ls [OPTION]..[FILE]..
+
+Present working Diretory
+$pwd
+
+alias 
+
+Create empty files
+$touch arq1.txt arq2.txt
+
+Create Directories
+$mkdir dir1
+
+
+Copying and moving files
+
+Copy
+$cp [OPTION]... SOURCE DEST 
+
+Move or rename a file or directory locally
+$mv [OPTION]... SOURCE DEST
+
+For lightning-fast copies of big files or when you are copying large groups os files, we can use remote sync utility
+$rsync [OPTION]... SOURCE DEST
+
+Removing files
+$rm [OPTION]... FILE
+$rm -rv [files]
+
+
+Linking Files and Directories
+There are two types of links
+    -- symbolic link - called a soft link
+    -- hard link
+
+Establishing a Hard Link
+is a file or directory that has onde index(inode) number but at least two diferent file names.
+Thus, the file has two names but is physically onde file.
+A hard link allows you to have a pseudo-copy os a file without truly copying its data.
+This is often used in file backups where not enough filesystem space exists to bak up the file's data.
+
+To create Hard Link
+$ln file1 file2
+
+To remove the linked file
+$unlink
+
+Constructing a Soft Link
+To create a symbolic link
+$ ln -s file1 file2
