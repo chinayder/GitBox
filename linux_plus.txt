@@ -160,3 +160,25 @@ $unlink
 Constructing a Soft Link
 To create a symbolic link
 $ ln -s file1 file2
+
+
+
+Cap04 - Searching and Analyzing Text - 07abr-**
+
+Processing Text Files
+
+Filtering Text
+
+cut utility
+$cut OPTION.. FILE..
+
+$grep
+
+Formatting Text
+sort utility
+$sort OPTION.. FILE..
+
+$pr
+
+$printf
+
